@@ -44,6 +44,7 @@ def check_timing_budget(value):
         raise cv.Invalid("Timing budget must be between 17000us and 4294967295us")
     return value
 
+
 CONFIG_SCHEMA = cv.All(
     sensor.sensor_schema(
         VL53L0XSensor,
