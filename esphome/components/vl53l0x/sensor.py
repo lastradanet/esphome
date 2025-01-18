@@ -38,6 +38,7 @@ def check_timeout(value):
         raise cv.Invalid("Maximum timeout can not be greater then 60 seconds")
     return value
 
+
 def check_timing_budget(value):
     value = cv.positive_time_period_microseconds(value)
     if value.total_microseconds < 17000 or value.total_microseconds > 4294967295:
